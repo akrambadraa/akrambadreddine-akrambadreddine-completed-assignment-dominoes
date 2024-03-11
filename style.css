@@ -1,0 +1,48 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 120vh;
+  margin: 0;
+  background-color: rgb(0, 255, 157);
+}
+
+.dominoes-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  padding: 15px;
+}
+
+.domino-half {
+  width: 70px;
+  height: 100px; 
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px; 
+}
+.dot-row {
+  display: flex;
+  justify-content: center;
+  gap: 5px; 
+  width: 100%;
+}
+.dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: black;
+}
+.dots-1 .dot-row:not(:nth-child(2)) { display: none; }
+.dots-1 .dot-row:nth-child(2) .dot:not(:nth-child(2)) { display: none; }
+.dots-2 .dot-row:nth-child(2) { display: none; }
+.dots-2 .dot-row .dot:not(:nth-child(1)):not(:nth-child(3)) { display: none; }
+.dots-3 .dot-row:not(:nth-child()) .dot:not(:nth-child(1)):not(:nth-child(3)) { display: none; }
+.dots-3 .dot-row:nth-child(2) .dot:not(:nth-child(2)) { display: none; }
+.dots-4 .dot-row:nth-child(2) { display: none; }
+.dots-5 .dot-row:nth-child(2) .dot:not(:nth-child(2)) { display: none; }
+
+
